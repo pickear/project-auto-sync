@@ -5,8 +5,8 @@ on:
     branches:
       -master
   workflow_dispatch:
-  #schedule:
-   # - cron: 0/1 * * * *   # 每隔12小时
+  schedule:
+    - cron: 0 */24 * * *   # 每隔24小时
   watch:                                                        # 监视操作
     types: [started]                                            # 点击 Star 之后
 jobs:
