@@ -6,9 +6,10 @@ on:
   push:
     branches:
       -master
-  schedule:
-    - cron: 0/1 * * * *
-    # 每隔12小时
+  #schedule:
+   # - cron: 0/1 * * * *   # 每隔12小时
+  watch:                                                        # 监视操作
+    types: [started]                                            # 点击 Star 之后
 jobs:
   update_external_airflow_fork:
     runs-on: ubuntu-latest
